@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    margin: 0;
+    height: calc(100vh + 4.5em); /* Footer height is 4.5em */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "header"
+                         "nav"
+                         "upperbody"
+                         "hero"
+                         "lowerbody"
+                         "footer";
+}
+
+/* Header */
+
+header {
+    margin: auto 0;
+    grid-area: header;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link, header a:visited {
+    color: #FFFFFF;
+}
+
+/* Navigation */
+
+nav {
+    grid-area: nav;
+    padding: 0 1em;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5em;
+    border-bottom: 1px solid #2B2B2B;
+}
+
+nav a:link, nav a:visited {
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    color: #00FFFF;
+}
+
+/* Main */
+
+#upperbody {
+    grid-area: upperbody;
+}
+
+#homehero {
+    grid-area: hero;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(assets/homehero.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#lowerbody {
+    grid-area: lowerbody;
+}
+
+/* Footer */
+
+footer {
+    grid-area: footer;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 2em;
+}
+
+footer a {
+    color: #00FFFF;
+}
+
+h1 {
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    padding: 0.5em;
+}
+
+/* Responsive UI */
+
+@media (min-width: 450px) {
+    nav {
+        margin: auto 0;
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 800px) {
+    header {
+        text-align: left;
+        border: none;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: end;
+        align-content: center;
+    }
+
+    nav li {
+        padding: 0 1em;
+    }
+
+    #wrapper {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+                              "header    header    header nav    nav       nav"
+                              "upperbody upperbody hero   hero   lowerbody lowerbody"
+                              "footer    footer    footer footer footer    footer";
+    }
+}
