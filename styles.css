@@ -199,14 +199,19 @@ input {
     justify-content: space-between;
 }
 
+button, #submit {
+    background-color: #00FFFF;
+    color: #000000;
+    border: none;
+    padding: 0.15em 2em;
+    border-radius: 2em;
+}
+
 button {
     align-self: center;
     font-size: 1em;
-    background-color: #00FFFF;
-    border: none;
-    padding: 1em 2em;
-    border-radius: 2em;
     margin: 1em 0 0 1em;
+    padding: 1em 2em;
 }
 
 /* Footer */
