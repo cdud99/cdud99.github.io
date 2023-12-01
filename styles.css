@@ -133,6 +133,10 @@ main {
     z-index: 1;
 }
 
+#upperbody h2 {
+    margin: 1em 0;
+}
+
 #homehero, #contacthero {
     grid-area: hero;
     margin: 2em;
@@ -266,6 +270,7 @@ video {
     margin: 0;
     position: absolute;
     height: calc(100vh - 12em - 9px);
+    min-height: calc(400px + 12em);
     width: 100vw;
     top: calc(12em + 9px);
     left: 0;
@@ -326,6 +331,7 @@ h1 {
 
     video {
         height: calc(100vh - 7em - 2px);
+        min-height: calc(400px + 11.5em);
         top: calc(7em + 2px);
     }
 }
@@ -347,7 +353,7 @@ h1 {
     }
 
     #homehero {
-        margin: 0;
+        margin: 2em 0;
     }
 
     #wrapper {
@@ -416,6 +422,7 @@ h1 {
 
     video {
         height: calc(100vh - 4em - 5px);
+        min-height: calc(400px + 4em);
         top: calc(4em + 5px);
     }
 }
